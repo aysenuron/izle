@@ -1,0 +1,83 @@
+body {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: "Big Shoulders Inline", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.container {
+    box-sizing: border-box;
+    margin: 20px;
+    position: relative;
+}
+
+#search-box {
+    box-sizing: border-box;
+    border: 1px lightgray solid;
+    border-radius: 10px;
+    padding: 16px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+#watchlist , #suggestions{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+#watchlist{
+    margin-top: -80px;
+}
+
+.hidden {
+    display: none;
+}
+
+#suggestions {
+    z-index: 10;
+}
+
+#suggestions > div, #watchlist  > div {
+    box-sizing: border-box;
+    padding: 24px 8px;
+    border-bottom: 1px lightgray solid;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-weight: 500;
+    background-color: white;
+}
+
+#suggestions div:hover {
+    background-color: rgb(249, 249, 249);
+    cursor: pointer;
+}
+
+#suggestions img {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    
+}
+
+#watchlist img {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+button{
+    margin-left: auto;
+    background-color: white;
+    border: 1px lightgray solid;
+    border-radius: 10px;
+    padding: 8px 16px;
+}
