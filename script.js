@@ -10,6 +10,7 @@ searchBox.addEventListener("input", () => {
 
     if(!query) {
         suggestions.innerHTML = "";
+        suggestions.classList.add("hidden");
         return;
     };
     fetch(`${API_URL}&query=${query}`)
@@ -19,6 +20,7 @@ searchBox.addEventListener("input", () => {
 
 function displaySuggestions(movies) {
     suggestions.innerHTML = "";
+    suggestions.classList.remove("hidden");
 
     movies.slice(0, 5).forEach(movie => {
         const liContainer = document.createElement("div");
@@ -73,7 +75,7 @@ function renderWatchList() {
         watchListRender.appendChild(movieContainer);
 
         const markAsWatched = document.createElement("button");
-        markAsWatched.textContent = "Watched";
+        markAsWatched.textContent = "Remove";
         movieContainer.appendChild(markAsWatched);
 
         markAsWatched.addEventListener("click", () => {
